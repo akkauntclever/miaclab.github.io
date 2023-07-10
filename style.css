@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 header {
     height:100%;
@@ -47,4 +48,13 @@ flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
-
+.b1-text-1 {
+    text-align: center;
+    font-size: 50px;
+}
+.b1-text-2 {
+    font-size: ;
+}
+.b1-text-3 {
+    font-size: ;
+}
