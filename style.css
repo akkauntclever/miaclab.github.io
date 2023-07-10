@@ -2,8 +2,17 @@
     margin: 0;
     padding: 0;
 }
+header {
+    height:100%;
+        width:100%;
+        background-image:url(image.avif);
+        background-repeat:no-repeat;
+        background-size:cover;
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.avif',sizingMethod='scale');
+        -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.avif',sizingMethod='scale')";
+}
 .menu {
-    background-color: antiquewhite;
+    background-color: rgba(247, 247, 247, 0.916);
     display: flex;
     flex-wrap: wrap;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -30,3 +39,12 @@ flex-wrap: wrap;
     height: 30px;
     padding: 30px 20px 30px 20px;
 }
+.block-1 {
+    background-color: rgba(255, 255, 255, 0.56);
+    padding: 40vh 0 40vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
