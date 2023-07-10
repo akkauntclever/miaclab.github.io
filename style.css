@@ -2,3 +2,31 @@
     margin: 0;
     padding: 0;
 }
+.menu {
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+
+}
+.logo {
+flex-grow: 1;
+display: flex;
+justify-content: center;
+
+}
+.list {
+flex-grow: 4;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.list-company, .list-services, .list-contacts, .list-forms{
+    margin: 0 20px 0 20px;
+}
+.logo-1 {
+    height: 30px;
+    padding: 30px 20px 30px 20px;
+}
