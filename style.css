@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    
 }
 header {
     height:100%;
@@ -15,7 +14,6 @@ header {
 .menu {
     /* position: fixed; */
     width: 100%;
-
 }
 .menu-1 {
     background-color: rgba(247, 247, 247, 0.916);
@@ -206,14 +204,25 @@ flex-wrap: wrap;
 }
 .block-6 {
     display: flex;
+    padding-top: 20px;
 }
 .b6-1 {
     font-size: 45px;
-    flex-grow: 4;
-    margin: 40px 5vw 40px 10vw;
+    flex-grow: 5;
+    margin: 35px 5vw 40px 10vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.b6-2 {
+.img-email-img, .img-phone-img {
+    height: 50px 
+}
+.img-email, .img-phone {
     flex-grow: 1;
+    margin: 37px 1vw 10px 1vw;
+}
+   
+
+.b6-2 {
+    flex-grow: 2;
     display: flex;
     flex-direction: column;
     font-size: 23px;
@@ -222,3 +231,171 @@ flex-wrap: wrap;
 .b6-2-1, .b6-2-2 {
     margin: 5px 0 5px 0;
 }
+.block-7 {
+    display: flex;
+}
+.b7-forms{
+    flex-grow: 1;
+    /* border: 2px black solid; */
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 246, 233); 
+    margin: 5px 7vw 10px 5vw;
+    width: min-content;
+}
+.b7-forms-1 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin: 25px 1vw 25px 1vw;
+}
+.b7-forms-2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0 4vw 30px 2vw
+}
+.form-1 {
+    width: 100%;
+}
+ .name-form, .number-form, .email-form, .message-form, .button-form {
+    display: flex;
+    width: 100%;
+    margin: 15px 0 15px 0;
+}
+.name-form {
+    margin-top: 0;
+}
+
+.name-form-1, .number-form-1, .email-form-1, .message-form-1, .button-form-1 {
+    box-sizing: border-box;
+    width: 100%; 
+}
+.name-form-2, .number-form-2, .email-form-2 {
+    width: 100%;
+    font-size: 19px;
+    height: 40px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    margin-right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+    outline: none;
+    color: rgb(49, 49, 49);
+}
+.name-form-2:focus, .number-form-2:focus, .email-form-2:focus, .message-form-2:focus {
+    border: 1px rgb(169, 169, 169) solid;
+}
+.chb1, .chb2, .chb3 {
+    display: flex;
+    align-items: center;
+    margin-right: 3px;
+    margin-left: 1.5vw;
+}
+input[type=checkbox]
+{
+  -ms-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+}
+.chb-1 {
+    opacity: 0;
+    cursor: inherit;
+}
+.star, .star-1 {
+    color: brown;
+    font-size: 25px;
+    margin-right: 5px;
+}
+.star-1 {
+    opacity: 0;
+    cursor: default;
+}
+.message-form-2 {
+    box-sizing: border-box; 
+    width: 100%;
+    resize: vertical;
+    font-size: 19px;
+    margin-right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 25px;
+    padding-top: 10px;
+    height: 200px;
+    border: 0;
+    outline: none;
+    color: rgb(49, 49, 49);
+}
+.button-form-2 {
+    width: 100%;
+    font-size: 19px;
+    height: 40px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    margin-right: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    border: 2px white solid;
+}
+.button-form-2:hover {
+    background-color: bisque;
+    border: 2px black solid;
+}
+.button-form-2:focus {
+    background-color: rgb(252, 235, 214);
+    border: 5px rgb(63, 63, 63) solid;
+}
+.button-form-2:focus::after {
+    background-color: rgb(255, 255, 255);
+    border: 1px rgb(63, 63, 63) solid;
+}
+
+
+/* form > div {
+    background: white;
+    border-bottom: 2px solid #ccc;
+}
+.name-form-1, .number-form-1, .email-form-1 {
+    border: 0;
+    padding: 15px 15px 15px 40px;
+    background: #eee;
+}
+.name-form {
+    max-width: 400px;
+}
+form > div > input[type="text"]:focus + textarea,
+form > div > input[type="email"]:focus + textarea {
+    outline: 0;
+    background: white;
+}
+form > div > input[type="text"]:valid:focus  + textarea,
+form > div > input[type="email"]:valid:focus {
+     outline: 0; 
+    background: url(galochka.jpg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px;
+}
+.email-form, .number-form {
+    padding-left: 10px;
+    width: max-content; 
+}
+
+.number-form-1, .email-form-1 {
+    display: flex;
+    align-items: center;
+    max-width: 400px; 
+}
+.chb1, .chb2 {
+    width: 15px;
+}
+
+
+ */
+.b7-about {
+    flex-grow: 1;
+
+}
+
+
+/* .message-form-1  */

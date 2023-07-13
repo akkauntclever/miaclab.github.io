@@ -12,8 +12,8 @@
     <!-- header -->
 
     <header class="header">
-        <div class="menu" id="menu">
-            <div class="menu-1" id="menu-1">
+        <div class="menu">
+            <div class="menu-1">
                 <div class="logo">
                     <img src="logo.png" alt="логотип" class="logo-1">
                 </div>
@@ -184,6 +184,16 @@
                 <div class="b6-1">
                     Свяжитесь с нами:
                 </div>
+                <div class="img-phone">
+                    <a href="" class="img-phone-a">
+                        <img src="phone.png" alt="телефон" class="img-phone-img">
+                    </a>
+                </div>
+                <div class="img-email">
+                    <a href="mailto:info@miaclab.ru" class="img-email-a">
+                        <img src="email.webp" alt="почта" class="img-email-img">
+                    </a>
+                </div>
                 <div class="b6-2">
                     <div class="b6-2-1">
                         +7 (495) 128-32-35
@@ -200,23 +210,81 @@
                     </div>
                     <div class="b7-forms-2">
                         <form action="" class="form-1">
-                            <input type="text">
-                            <input type="checkbox" name="" id="">
-                            <input type="number">
-                            <input type="checkbox" name="" id="">
-                            <input type="email">
-                            <input type="text">
-                            <input type="button" value="">
+                            <div class="name-form">
+                                <div class="chb1 chb-1">
+                                    <input type="checkbox" name="number-cb" id="number-cb">
+                                </div>
+                                <div class="star-1">
+                                    <div class="star-1-1">
+                                        *
+                                    </div>
+                                </div>
+                                <div class="name-form-1">
+                                <input type="text" class="name-form-2" cols="2" name="name1" placeholder="Введите Ваше имя">
+                                </div>
+                            </div>
+                            <div class="number-form">
+                                <div class="chb2">
+                                    <input type="checkbox" name="number-cb" id="number-cb">
+                                </div>
+                                <div class="star">
+                                    *
+                                </div>
+                                <div class="number-form-1">
+                                    <input id="phone" type="text" class="number-form-2" name="number1" placeholder="Введите номер телефона">
+                                </div>
+                            </div>
+                            <div class="email-form">    
+                                <div class="chb3">
+                                    <input type="checkbox" name="email-cb" id="email-cb">
+                                </div>
+                                <div class="star">
+                                    *
+                                </div>
+                                <div class="email-form-1">
+                                    <input type="email" class="email-form-2" id="email-1" name="email1" placeholder="Введите адрес почты">
+                                </div>
+                            </div>    
+                            <div class="message-form">
+                                <div class="chb1 chb-1">
+                                    <input type="checkbox" name="number-cb" id="number-cb">
+                                </div>
+                                <div class="star-1">
+                                    <div class="star-1-1">
+                                        *
+                                    </div>
+                                </div>
+                                <div class="message-form-1">
+                                    <textarea type="text" class="message-form-2" name="text1" placeholder="Введите текст сообщения"></textarea>
+                                </div>
+                            </div>
+                            <div class="button-form">
+                                <div class="chb1 chb-1">
+                                    <input type="checkbox" name="number-cb" id="number-cb">
+                                </div>
+                                <div class="star-1">
+                                    <div class="star-1-1">
+                                        *
+                                    </div>
+                                </div>
+                                <div class="button-form-1">
+                                    <input type="button" value="Отправить" class="button-form-2" id="button-1">
+                                </div>
+                            </div>
+                            <div class="comment">
+                                * - выберите приоритетный способ связи с Вами
+                            </div>
                         </form>
                     </div>
                 </div>
                 <div class="b7-about">
                     <div class="shedule">
                         <div class="shedule-1">
-
+                            График работы: <br>
+                            <span class="shedule-1-1">(График приёма образцов)</span>
                         </div>
                         <div class="shedule-2">
-
+                            Пн-Пт с 9:00 до 18:00
                         </div>
                     </div>
                     <div class="doc">
@@ -261,6 +329,19 @@
 
 
     <script src="jquery.js"></script>
+    <script src="jquery.maskedinput.min.js"></script>
+    <script>
+        $(function(){
+          $("#phone").mask("+7 (999) 999-99-99");
+        });
+        $(function() {
+            $("#email-1").inputmask({
+                mask: "*{3,20}@*{3,20}.*{2,7}",
+            });
+        });
+
+        
+        </script>
     <!-- <script>
         var previousScroll = 0,
     headerOrgOffset = $('#menu-1').height();
