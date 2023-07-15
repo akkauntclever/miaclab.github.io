@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ООО "МИАЦ" - Московский испытательный аналитичесский центр</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/logo-1.png"/>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -15,7 +16,7 @@
         <div class="menu">
             <div class="menu-1">
                 <div class="logo">
-                    <img src="logo.png" alt="логотип" class="logo-1">
+                    <img src="img/logo.png" alt="логотип" class="logo-1">
                 </div>
                 <div class="list">
                     <div class="list-company">
@@ -66,7 +67,7 @@
             </div>
             <div class="block-3">
                 <div class="photo-2">
-                    <img src="homyaki.png" alt="хомяки" class="homuak-1">
+                    <img src="img/homyaki.png" alt="хомяки" class="homuak-1">
                 </div>
                 <div class="b3-list">
                     <div class="b3-list-1">
@@ -185,13 +186,13 @@
                     Свяжитесь с нами:
                 </div>
                 <div class="img-phone">
-                    <a href="" class="img-phone-a">
-                        <img src="phone.png" alt="телефон" class="img-phone-img">
+                    <a href="tel:84951283235" class="img-phone-a">
+                        <img src="img/phone.png" alt="телефон" class="img-phone-img">
                     </a>
                 </div>
                 <div class="img-email">
                     <a href="mailto:info@miaclab.ru" class="img-email-a">
-                        <img src="email.webp" alt="почта" class="img-email-img">
+                        <img src="img/mail.png" alt="почта" class="img-email-img">
                     </a>
                 </div>
                 <div class="b6-2">
@@ -204,15 +205,15 @@
                 </div>    
             </div>
             <div class="block-7">
-                <div class="b7-forms">
+                <div class="b7-forms" id="b7">
                     <div class="b7-forms-1">
                         Форма обратной связи
                     </div>
                     <div class="b7-forms-2">
-                        <form action="" class="form-1">
+                        <form action="#" class="form-1" method="post" id="form">
                             <div class="name-form">
                                 <div class="chb1 chb-1">
-                                    <input type="checkbox" name="number-cb" id="number-cb">
+                                    <input type="checkbox" name="name-cb" id="name-cb">
                                 </div>
                                 <div class="star-1">
                                     <div class="star-1-1">
@@ -220,7 +221,7 @@
                                     </div>
                                 </div>
                                 <div class="name-form-1">
-                                <input type="text" class="name-form-2" cols="2" name="name1" placeholder="Введите Ваше имя">
+                                <input type="text" class="name-form-2" name="name1" placeholder="Введите Ваше имя">
                                 </div>
                             </div>
                             <div class="number-form">
@@ -242,7 +243,7 @@
                                     *
                                 </div>
                                 <div class="email-form-1">
-                                    <input type="email" class="email-form-2" id="email-1" name="email1" placeholder="Введите адрес почты">
+                                    <input type="email" class="email-form-2 req" id="email-1" name="email1" placeholder="Введите адрес почты">
                                 </div>
                             </div>    
                             <div class="message-form">
@@ -255,7 +256,7 @@
                                     </div>
                                 </div>
                                 <div class="message-form-1">
-                                    <textarea type="text" class="message-form-2" name="text1" placeholder="Введите текст сообщения"></textarea>
+                                    <textarea type="text" class="message-form-2" name="message1" placeholder="Введите текст сообщения"></textarea>
                                 </div>
                             </div>
                             <div class="button-form">
@@ -268,11 +269,14 @@
                                     </div>
                                 </div>
                                 <div class="button-form-1">
-                                    <input type="button" value="Отправить" class="button-form-2" id="button-1">
+                                    <input type="submit" value="Отправить" class="button-form-2" id="button-1">
                                 </div>
                             </div>
                             <div class="comment">
                                 * - выберите приоритетный способ связи с Вами
+                            </div>
+                            <div class="chb3">
+                                <input type="checkbox" checked name="checkbox-politics" id="politics" class="politics req checkbox-politics">
                             </div>
                         </form>
                     </div>
@@ -305,12 +309,17 @@
 
         <!-- Адрес -->
 
-        <section class="adress">
-            <div class="our-adress">
+        <section class="section-address">
+            <div class="our-address">
                 Наш адрес
             </div>
             <div class="map">
-                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa1e1324cfc9d390a38416e969553fe6e5e56205da8e82466242ce5db0fe19c77&amp;&amp;height=370&amp;lang=ru_RU&amp;scroll=true"></script>
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa1e1324cfc9d390a38416e969553fe6e5e56205da8e82466242ce5db0fe19c77&amp;source=constructor" width="90%" height="370px" frameborder="0" class="map address" id="map"></iframe>
+            </div>
+            <div class="div-button-map">
+                <button class="button-map" id="button-map" onclick="buttons()">
+                    &#8744;
+                </button>
             </div>
             <div class="our-adress-1">
                 127254, Россия, г. Москва, м. Бутырская, пр. Огородный, д.5, стр. 2, 3 этаж
@@ -323,13 +332,12 @@
 
     <footer class="footer">
 
-
     </footer>
 
 
 
-    <script src="jquery.js"></script>
-    <script src="jquery.maskedinput.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script>
         $(function(){
           $("#phone").mask("+7 (999) 999-99-99");
@@ -339,29 +347,18 @@
                 mask: "*{3,20}@*{3,20}.*{2,7}",
             });
         });
-
-        
         </script>
-    <!-- <script>
-        var previousScroll = 0,
-    headerOrgOffset = $('#menu-1').height();
-
-$('#menu').height($('#menu-1').height());
-
-$(window).scroll(function () {
-    var currentScroll = $(this).scrollTop();
-    if (currentScroll > headerOrgOffset) {
-        if (currentScroll > previousScroll) {
-            $('#menu').slideDown();
-        } else {
-            $('#menu').slideUp();
-        }
-    } else {
-            $('#menu').slideUp();
-    }
-    previousScroll = currentScroll;
-});
-    </script> -->
+        <script src="js/mail.js"></script>
+        <script src="js/style.js"></script>
+        <script>
+            $(window).scroll(function(){
+                if ($(this).scrollTop() > 700) {
+                    $('.menu').addClass('fixed');
+                } else {
+                    $('.menu').removeClass('fixed');
+                }
+          });
+        </script>
 
 </body>
 </html>

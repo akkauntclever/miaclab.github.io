@@ -5,16 +5,25 @@
 header {
     height:100%;
         width:100%;
-        background-image:url(image.avif);
+        background-image:url(../img/image.avif);
         background-repeat:no-repeat;
         background-size:cover;
-        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.image.avif',sizingMethod='scale');
-        -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='image.avif',sizingMethod='scale')";
+        filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/image.avif',sizingMethod='scale');
+        -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/image.avif',sizingMethod='scale')";
 }
 .menu {
-    /* position: fixed; */
     width: 100%;
+    transition: top 1s;
+    height:80px;
+    top:-80px;
 }
+.menu.fixed {
+    position: fixed;
+    top: 0;
+}
+.menu.fixed ~ .block-3 {
+    margin-top:80px;
+  }
 .menu-1 {
     background-color: rgba(247, 247, 247, 0.916);
     display: flex;
@@ -200,7 +209,6 @@ flex-wrap: wrap;
 
 .contacts {
     padding-bottom: 30px;
-    height: 1000px;
 }
 .block-6 {
     display: flex;
@@ -212,14 +220,20 @@ flex-wrap: wrap;
     margin: 35px 5vw 40px 10vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-.img-email-img, .img-phone-img {
+.img-phone-img {
     height: 50px 
 }
-.img-email, .img-phone {
-    flex-grow: 1;
-    margin: 37px 1vw 10px 1vw;
+.img-email-img {
+    height: 60px;
 }
-   
+.img-phone {
+    flex-grow: 1;
+    margin: 37px 0.5vw 10px 1vw;
+}
+.img-email {
+    flex-grow: 1;
+    margin: 33px 1.5vw 10px 0.5vw;
+}  
 
 .b6-2 {
     flex-grow: 2;
@@ -236,12 +250,13 @@ flex-wrap: wrap;
 }
 .b7-forms{
     flex-grow: 1;
-    /* border: 2px black solid; */
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 246, 233); 
     margin: 5px 7vw 10px 5vw;
     width: min-content;
+    position: relative;
+
 }
 .b7-forms-1 {
     display: flex;
@@ -256,6 +271,22 @@ flex-wrap: wrap;
 }
 .form-1 {
     width: 100%;
+
+}
+.b7-forms::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 58, 58, 0.463) url(../img/round.gif) center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+}
+.b7-forms.sending::after {
+    opacity: 1;
+    visibility: visible;
 }
  .name-form, .number-form, .email-form, .message-form, .button-form {
     display: flex;
@@ -285,11 +316,17 @@ flex-wrap: wrap;
 .name-form-2:focus, .number-form-2:focus, .email-form-2:focus, .message-form-2:focus {
     border: 1px rgb(169, 169, 169) solid;
 }
+.email-form-2.error{
+    border: red solid;
+}
 .chb1, .chb2, .chb3 {
     display: flex;
     align-items: center;
     margin-right: 3px;
     margin-left: 1.5vw;
+}
+.checkbox-politics.error {
+    box-shadow: 0 0 15px red;
 }
 input[type=checkbox]
 {
@@ -343,11 +380,53 @@ input[type=checkbox]
 }
 .button-form-2:focus {
     background-color: rgb(252, 235, 214);
-    border: 5px rgb(63, 63, 63) solid;
+    border: 2px rgb(63, 63, 63) solid;
 }
-.button-form-2:focus::after {
+
+
+
+
+/* Адрес */
+.section-address{
+background-color: rgb(255, 216, 192);
+}
+.our-address{
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    padding: 40px 0 40px 0;
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+    transition: calc(2s);
+}
+.address {
+    height: 50px;
+}
+.div-button-map {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 0 0;
+}
+.button-map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 30vw;
     background-color: rgb(255, 255, 255);
-    border: 1px rgb(63, 63, 63) solid;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.our-adress-1 {
+    display: flex;
+    padding: 10px 2vw 20px 5vw;
+    font-size: 20px;
+    color: rgb(42, 42, 42);
 }
 
 
@@ -392,6 +471,10 @@ form > div > input[type="email"]:valid:focus {
 
 
  */
+
+
+
+
 .b7-about {
     flex-grow: 1;
 
