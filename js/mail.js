@@ -28,20 +28,22 @@ document.addEventListener('DOMContentLoaded', function () {
     function formValidate(form) {
         let error = 0;
         let formReq = document.querySelectorAll('.req');
-        for (let index=0; index < formReq.length; index++){
-            const input = formReq[index];
+        
+            let input = formReq[0];
+            let input2 = formReq[1];
             formRemoveError(input);
+            formRemoveError2(input2);
             if (input.classList.contains('email-form-2')) {
                 if (emailTest(input)) {
                     formAddError(input);
                     error++;
                 }
             }
-            else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-                formAddError(input);
+            if (input2.getAttribute("type") === "checkbox" && input2.checked === false) {
+                formAddError2(input2);
                 error++;
             }    
-        }
+        
         return error;        
     }
 
@@ -54,7 +56,18 @@ document.addEventListener('DOMContentLoaded', function () {
         input.parentElement.classList.add('error');
         input.classList.add('error');
     }
-
+    function formAddError2(input) {
+        let formReq2 = document.querySelectorAll('.reqq');
+        let input2 = formReq2[0];
+        input2.parentElement.classList.add('error');
+        input2.classList.add('error');
+    }
+    function formRemoveError2(input) {
+        let formReq2 = document.querySelectorAll('.reqq');
+        let input2 = formReq2[0];
+        input2.parentElement.classList.remove('error');
+        input2.classList.remove('error');
+    }
     
     function emailTest(input) {
         return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);

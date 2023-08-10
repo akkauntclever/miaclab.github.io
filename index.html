@@ -7,36 +7,182 @@
     <title>ООО "МИАЦ" - Московский испытательный аналитичесский центр</title>
     <link rel="shortcut icon" href="img/logo-1.png"/>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css"> -->
 </head>
 <body>
 
     <!-- header -->
 
-    <header class="header">
+    <div class="scrollto changing" id="scrollto">
+        <div class="menu-1">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="логотип" class="logo-1">
+                </a>
+            </div>
+            <div class="list menu-href listik">
+                <div class="list-company">
+                    <a href="#2" class="menu-href">
+                    о&nbspкомпании
+                    </a>
+                </div>
+                <div class="list-services">
+                    <a href="#3" class="menu-href">
+                    услуги
+                    </a>
+                </div>
+                <div class="list-contacts">
+                    <div class="list-contacts-1">
+                        <a href="#4" class="menu-href">
+                        контакты
+                        </a>                        
+                    </div>
+                    <div class="list-contacts-2">
+                        
+                        <div class="inside-adress">
+                            <div class="circle-adress"></div>
+                            <div class="inside-adress-1">
+                                <a href=".section-address" class="href-adress">
+                                адрес
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-forms">
+                    <a href="#5" class="menu-href">
+                    формы&nbspдокументов
+                    </a>
+                </div>
+            </div>
+            <div class="menu-ikon">
+                <button id="menu-button" class="menu-button" onclick="closeMenu()">
+                    <img src="img/list-icon-cross.png" alt="список" class="menu-button-icon">
+                </button> 
+            </div>  
+            <div class="menu-ikon fall-menu-ikon">
+                <div>
+                <button id="menu-button-1" class="menu-button" onclick="blockMenu()">
+                    <img src="img/list-icon.png" alt="список" class="menu-button-icon menu-button-icon-changing">
+                </button>
+                </div>
+                <div class="fall-menu-list menu-href listik">
+                    <div class="list-company">
+                        <a href="#2" class="menu-href">
+                        о&nbspкомпании
+                        </a>
+                    </div>
+                    <div class="list-services">
+                        <a href="#3" class="menu-href">
+                        услуги
+                        </a>
+                    </div>
+                    <div class="list-contacts">
+                        <a href="#4" class="menu-href">
+                        контакты
+                        </a>
+                    </div>
+                    <div class="list-forms">
+                        <a href="#5" class="menu-href">
+                        формы&nbspдокументов
+                        </a>
+                    </div>       
+                </div>                     
+            </div>    
+        </div>
+    </div>
+    
+    <div class="button-icon-change" id="button-icon-change">
+        <div class="button-icon-change-1">
+            <button class="menu-button-change" onclick="addMenu()">
+                <img src="img/list-icon.png" alt="вернуть" class="menu-button-icon-change">
+            </button>
+        </div>
+    </div>
+
+    <header class="header menu-find" >
         <div class="menu">
+            <a name="href-1"></a>
             <div class="menu-1">
                 <div class="logo">
+                    <a href="index.html">
                     <img src="img/logo.png" alt="логотип" class="logo-1">
+                    </a>
                 </div>
                 <div class="list">
                     <div class="list-company">
+                        <a href="#2" class="menu-href menu-href-spec">
                         о&nbspкомпании
+                        </a>
                     </div>
                     <div class="list-services">
+                        <a href="#3" class="menu-href menu-href-spec">
                         услуги
+                        </a>
                     </div>
                     <div class="list-contacts">
-                        контакты
+                        <div class="list-contacts-1">
+                            <a href="#4" class="menu-href menu-href-spec">
+                            контакты
+                            </a>                        
+                        </div>
+                        <div class="list-contacts-2">
+                            
+                            <div class="inside-adress">
+                                <div class="circle-adress"></div>
+                                <div class="inside-adress-1">
+                                    <a href="#section-address" class="href-adress menu-href-spec">
+                                    адрес
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="list-forms">
+                        <a href="#5" class="menu-href">
                         формы&nbspдокументов
-                    </div>
+                        </a>
+                    </div>            
                 </div>
+                <div class="menu-ikon fall-menu-ikon">
+                    <div>
+                    <button id="menu-button-1" class="menu-button" onclick="blockMenu()">
+                        <img src="img/list-icon.png" alt="список" class="menu-button-icon menu-button-icon-changing">
+                    </button>
+                    </div>
+                    <div class="fall-menu-list">
+                        <div class="list-company">
+                            <a href=".company" class="menu-href">
+                            о&nbspкомпании
+                            </a>
+                        </div>
+                        <div class="list-services">
+                            <a href=".services" class="menu-href">
+                            услуги
+                            </a>
+                        </div>
+                        <div class="list-contacts">
+                            <a href=".contacts" class="menu-href">
+                            контакты
+                            </a>
+                        </div>
+                        <div class="list-forms">
+                            <a href="#4" class="menu-href">
+                            формы&nbspдокументов
+                            </a>
+                        </div>       
+                    </div>                     
+                </div>  
+
             </div>
         </div>
         <div class="block-1">
             <div class="b1-text-1">
                 Московский испытательный <br>аналитический центр
+            </div>
+            <div class="b1-text-1-change">
+                <img src="img/logo.png" alt="логотип" class="logo-1-2">
             </div>
             <div class="b1-text-2">
                 Испытательная лаборатория
@@ -50,6 +196,7 @@
                 </a>
             </div>
         </div>
+        </section>
     </header>
 
     <!-- main -->
@@ -57,8 +204,8 @@
     <main class="main">
 
         <!-- О компании -->
-
-        <section class="company">
+        <section></section>
+        <section class="company menu-find" id="2">
             <div class="b2-text">
                 <div class="b2-text-1">
                     О компании    
@@ -66,7 +213,7 @@
                 
             </div>
             <div class="block-3">
-                <div class="photo-2">
+                <div class="photo-2 animation3">
                     <img src="img/homyaki.png" alt="хомяки" class="homuak-1">
                 </div>
                 <div class="b3-list">
@@ -75,14 +222,15 @@
                             <div class="b3-list-1-1-1">
 
                             </div>
-                            <div class="b3-list-1-1-2">
+                            <div class="b3-list-1-1-2 common-b3-list-main">
                                 Качество и достоверность результатов                                
                             </div>
 
                         </div>
-                        <div class="b3-list-1-2">
-                            Сотрудники нашей лаборатории регулярно участвуют в проведении внутрилабораторного и межлабораторного контроля точности и воспроизводимости, а также сходимости результатов, в том числе в сличительных межлабораторных испытаниях
-                        
+                        <div class="b3-list-1-2 common-b3-list">
+                            <div class="animation2">
+                            Сотрудники нашей лаборатории регулярно участвуют в проведении внутрилабораторного и межлабораторного контроля точности и воспроизводимости, а также сходимости результатов, в том числе в сличительных межлабораторных испытаниях.
+                            </div>                       
                         </div>
                     </div>
                     <div class="b3-list-2">
@@ -90,12 +238,14 @@
                             <div class="b3-list-2-1-1">
 
                             </div>
-                            <div class="b3-list-2-1-2">
+                            <div class="b3-list-2-1-2 common-b3-list-main">
                             Компетентность и высокий уровень квалификации экспертов
                             </div>
                         </div>
-                        <div class="b3-list-2-2">
+                        <div class="b3-list-2-2 common-b3-list">
+                            <div class="animation2">
                             Сотрудники нашей лаборатории – это специалисты наивысшего класса. Строго следуя международным стандартам лабораторной практики, сотрудники регулярно совершенствуют свои профессиональные навыки, принимая участие в семинарах и тренингах, в том числе международного уровня, а также ежегодно проходят курсы обучения и повышения квалификации в лучших образовательных центрах. Расширение номенклатуры проводимых испытаний ведется сотрудниками постоянно.
+                            </div>
                         </div>
                     </div>
                     <div class="3-list-3">
@@ -103,12 +253,14 @@
                             <div class="b3-list-3-1-1">
 
                             </div>
-                            <div class="b3-list-3-1-2">
+                            <div class="b3-list-3-1-2 common-b3-list-main">
                             Минимальные сроки выполнения
                             </div>
                         </div>
-                        <div class="b3-list-3-2">
+                        <div class="b3-list-3-2 common-b3-list">
+                            <div class="animation2">
                             Все исследования и испытания продукции проводятся на высокотехнологичном современном оборудовании. Большинство этапов автоматизированы, что позволяет нам в минимальные сроки и с высокой точностью интерпретировать полученные результаты.
+                            </div>
                         </div>
                     </div>
                     <div class="b3-list-4">
@@ -116,12 +268,14 @@
                             <div class="b3-list-4-1-1">
 
                             </div>
-                            <div class="b3-list-4-1-2">
+                            <div class="b3-list-4-1-2 common-b3-list-main">
                             Контроль качества
                             </div>
                         </div>
-                        <div class="b3-list-4-2">
-                            «МИАЦ» - это профессионализм и качество результатов испытаний. Лаборатория регулярно проходит проверки независимыми экспертами и постоянно расширяет сферу своей деятельности.
+                        <div class="b3-list-4-2 common-b3-list">
+                            <div class="animation2">
+                            «МИАЦ» - это профессионализм и качество результатов испытаний. В лаборатории регулярно проходят проверки независимыми экспертами и постоянно расширяется сфера деятельности.
+                            </div>
                         </div>
                     </div>
                     <!-- <div class="3-list-5">
@@ -139,70 +293,112 @@
 
         <!-- Услуги -->
 
-        <section class="services">
+        <section class="services menu-find" id="3">
             <div class="block-4">
-                <div class="b4-text">
+                <div class="b4-text animation1">
                 Мы предлагаем:  
                 </div>
             </div>
             <div class="block-5">
-                <div class="b5-list-1">
+                <div class="b5-list-1 animation2">
+                    <div class="image-list-head">
+                    </div>
+                    <div class="text-list-head">
                     токсикологические испытания медицинских изделий
+                    </div>
                 </div>
                 <div class="b5-list-1-1">
-                    <div class="b5-list-1-1-1">
-                        санитарно-химические показатели
+                    <div class="b5-list-1-1-1 b5-list-1-1-all">
+                        <div class="image-list">
+                            <img src="img/checkMark.png" alt="галочка" class="checkMark">
+                        </div>
+                        <div class="text-list">
+                        санитарно-химические показатели                            
+                        </div>
                     </div>
-                    <div class="b5-list-1-1-2">
+                    <div class="b5-list-1-1-2 b5-list-1-1-all">
+                        <div class="image-list">
+                            <img src="img/checkMark.png" alt="галочка" class="checkMark">
+                        </div>
+                        <div class="text-list">
                         стерильность
+                        </div>
                     </div>
-                    <div class="b5-list-1-1-3">
+                    <div class="b5-list-1-1-3 b5-list-1-1-all">
+                        <div class="image-list">
+                            <img src="img/checkMark.png" alt="галочка" class="checkMark">
+                        </div>
+                        <div class="text-list">
                         цитологические испытания
+                        </div>
                     </div>
-                    <div class="b5-list-1-1-4">
+                    <div class="b5-list-1-1-4 b5-list-1-1-all">
+                        <div class="image-list">
+                            <img src="img/checkMark.png" alt="галочка" class="checkMark">
+                        </div>
+                        <div class="text-list">
                         раздражающее действие
+                        </div>
                     </div>
-                    <div class="b5-list-1-1-5">
+                    <div class="b5-list-1-1-5 b5-list-1-1-all">
+                        <div class="image-list">
+                            <img src="img/checkMark.png" alt="галочка" class="checkMark">
+                        </div>
+                        <div class="text-list">
                         имплантационный тест
+                        </div>
                     </div>
-                    <div class="b5-list-1-1-6">
-                        
-                        <a href="" class="b5-1">
-                            и многое другое <br> (смотрите полный список)    
-                        </a>
+                    <div class="b5-list-1-1-6 b5-list-1-1-all">
+                        <div class="image-list">
+                            <img src="img/checkMark.png" alt="галочка" class="checkMark">
+                        </div>
+                        <div class="text-list">
+                            <a href="" class="b5-1">
+                                и многое другое <br> (смотрите полный список)    
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="b5-list-2">
+                <div class="b5-list-2 animation2">
+                    <div class="image-list-head">
+                    </div>
+                    <div class="text-list-head">
                     технические испытания реагентов
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Контакты -->
 
-        <section class="contacts">
+        <section class="contacts menu-find" id="4">
             <div class="block-6">
                 <div class="b6-1">
-                    Свяжитесь с нами:
+                    Свяжитесь с&nbspнами:
                 </div>
-                <div class="img-phone">
-                    <a href="tel:84951283235" class="img-phone-a">
-                        <img src="img/phone.png" alt="телефон" class="img-phone-img">
-                    </a>
+                <div class="inf-1">
+                    <div class="inf-1-img">
+                        <div class="img-phone">
+                            <a href="tel:84951283235" class="img-phone-a">
+                                <img src="img/phone.png" alt="телефон" class="img-phone-img">
+                            </a>
+                        </div>
+
+                        <div class="img-email">
+                            <a href="mailto:info@miaclab.ru" class="img-email-a">
+                                <img src="img/mail.png" alt="почта" class="img-email-img">
+                            </a>
+                        </div>
+                    </div>    
+                    <div class="b6-2">
+                        <div class="b6-2-1">
+                            +7 (495) 128-32-35
+                        </div>
+                        <div class="b6-2-2">
+                            info@miaclab.ru
+                        </div>
+                    </div>    
                 </div>
-                <div class="img-email">
-                    <a href="mailto:info@miaclab.ru" class="img-email-a">
-                        <img src="img/mail.png" alt="почта" class="img-email-img">
-                    </a>
-                </div>
-                <div class="b6-2">
-                    <div class="b6-2-1">
-                        +7 (495) 128-32-35
-                    </div>
-                    <div class="b6-2-2">
-                        info@miaclab.ru
-                    </div>
-                </div>    
             </div>
             <div class="block-7">
                 <div class="b7-forms" id="b7">
@@ -226,18 +422,21 @@
                             </div>
                             <div class="number-form">
                                 <div class="chb2">
-                                    <input type="checkbox" name="number-cb" id="number-cb">
+                                    <input type="checkbox" name="number-cb" id="number-cb" class="chb2-ins">
+                                    <label for="number-cb" class="label"></label>                                    
                                 </div>
                                 <div class="star">
                                     *
                                 </div>
+
                                 <div class="number-form-1">
                                     <input id="phone" type="text" class="number-form-2" name="number1" placeholder="Введите номер телефона">
                                 </div>
                             </div>
                             <div class="email-form">    
                                 <div class="chb3">
-                                    <input type="checkbox" name="email-cb" id="email-cb">
+                                    <input type="checkbox" name="email-cb" id="email-cb" class="chb3-ins">
+                                    <label for="email-cb" class="label"></label>
                                 </div>
                                 <div class="star">
                                     *
@@ -273,11 +472,17 @@
                                 </div>
                             </div>
                             <div class="comment">
-                                * - выберите приоритетный способ связи с Вами
+                                <span class="comment-1-1">*</span> - выберите приоритетный способ связи с Вами
                             </div>
-                            <div class="chb3">
-                                <input type="checkbox" checked name="checkbox-politics" id="politics" class="politics req checkbox-politics">
-                            </div>
+                            <div class="conf-politics">
+                                <div class="chb4">
+                                    <input type="checkbox" checked name="checkbox-politics" id="politics" class="politics req checkbox-politics chb4-ins">
+                                    <label for="politics" class="label pol reqq"></label>
+                                </div>
+                                <div class="chb4-politics">
+                                    Даю согласие на обработку данных в&nbspсоответствии с <span class="chb4-politics-a-ins"><a href="" class="chb4-politics-a">политикой конфиденциальности</a></span>.
+                                </div>
+                            </div>    
                         </form>
                     </div>
                 </div>
@@ -287,13 +492,35 @@
                             График работы: <br>
                             <span class="shedule-1-1">(График приёма образцов)</span>
                         </div>
-                        <div class="shedule-2">
-                            Пн-Пт с 9:00 до 18:00
+                        <div class="shedule-inside">
+                            <div class="shedule-2">
+                            </div>
+                            <div class="shedule-3">
+                                Пн-Пт с 9:00 до 18:00
+                            </div>
                         </div>
                     </div>
-                    <div class="doc">
-                        ИНН/КПП 9715308897/ 771501001<br>
-                        ОГРН 5177746214927
+                    <div class="shedule-4">
+                        Реквизиты:
+                    </div>
+                    <div class="doc doc-all">
+                        <b>ИНН/КПП:</b> 9715308897/ 771501001
+                    </div>
+                    <div class="doc-all">
+                        <b>ОГРН:</b> 5177746214927
+                    </div>
+                    <div class="doc-all">
+                        <b>Расчётный счёт:</b> 40702810602590002335                        
+                    </div>
+                    <div class="doc-all">
+                        <b>Корреспондентский счёт:</b> 30101810200000000593<br>
+                        в ГУ БАНКА РОССИИ ПО ЦФО                        
+                    </div>
+                    <div class="doc-all">
+                        <b>БИК банка:</b> 044525593                        
+                    </div>
+                    <div class="doc-all">
+                        <b>Банк:</b> АО «АЛЬФА-БАНК»                        
                     </div>
                     <div class="more">
                         <a href="" class="more-1">
@@ -309,11 +536,17 @@
 
         <!-- Адрес -->
 
-        <section class="section-address">
+        <section class="section-address" id="section-address">
             <div class="our-address">
                 Наш адрес
             </div>
-            <div class="map">
+            
+            <div class="our-address-1">
+                <div class="our-address-1-1"  onclick="buttons()">
+                127254, Россия, г. Москва, м. Бутырская, пр. Огородный, д.5, стр. 2, 3 этаж
+                </div>
+            </div>
+            <div class="map" id="map-1">
                 <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa1e1324cfc9d390a38416e969553fe6e5e56205da8e82466242ce5db0fe19c77&amp;source=constructor" width="90%" height="370px" frameborder="0" class="map address" id="map"></iframe>
             </div>
             <div class="div-button-map">
@@ -321,44 +554,61 @@
                     &#8744;
                 </button>
             </div>
-            <div class="our-adress-1">
-                127254, Россия, г. Москва, м. Бутырская, пр. Огородный, д.5, стр. 2, 3 этаж
-            </div>
         </section>
 
     </main>
 
     <!-- footer -->
 
-    <footer class="footer">
+    <footer class="footer menu-find">
+        <div class="footer-1">
+            <div class="logo-footer">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="логотип" class="logo-1">
+                </a>
+            </div>
+            <div class="footer-content">
+                <div class="footer-content-1">
+                    <div class="footer-phone-image">
+                        <a href="tel:84951283235" class="img-phone-a">
+                            <img src="img/phone.png" alt="телефон" class="img-phone-img footer-img">
+                        </a>
+                    </div>
+                    <div class="footer-phone">
+                        +7 (495) 128-32-35
+                    </div> 
+                </div>                       
+                <div class="footer-content-2">                    
+                    <div class="footer-email-image">
+                        <a href="mailto:info@miaclab.ru" class="img-email-a">
+                            <img src="img/mail.png" alt="почта" class="img-email-img footer-img">
+                        </a>
+                    </div>
+                    <div class="footer-email">
+                        info@miaclab.ru
+                    </div>                      
+                </div>
 
+ 
+            </div>    
+        </div>
     </footer>
 
 
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
-    <script>
-        $(function(){
-          $("#phone").mask("+7 (999) 999-99-99");
+    <script src="js/mail.js"></script>
+    <script src="js/style.js"></script>
+    <!-- <script>
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 700) {
+                $('.menu').addClass('fixed');
+            } else {
+                $('.menu').removeClass('fixed');
+            }
         });
-        $(function() {
-            $("#email-1").inputmask({
-                mask: "*{3,20}@*{3,20}.*{2,7}",
-            });
-        });
-        </script>
-        <script src="js/mail.js"></script>
-        <script src="js/style.js"></script>
-        <script>
-            $(window).scroll(function(){
-                if ($(this).scrollTop() > 700) {
-                    $('.menu').addClass('fixed');
-                } else {
-                    $('.menu').removeClass('fixed');
-                }
-          });
-        </script>
+    </script> -->
 
 </body>
 </html>
