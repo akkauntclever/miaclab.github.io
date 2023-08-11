@@ -67,7 +67,6 @@ function buttons() {
 
 // menu
 
-    $('#scrollto').fadeIn();
     $('.changing').css({"transition" : "1s"})
     function removeMenu() {
         $('#button-icon-change').fadeOut('slow');
@@ -77,23 +76,35 @@ function buttons() {
         $('#button-icon-change').fadeOut('slow');
         $('#scrollto').removeClass('changing');
     }
-
-
+    function openMenu() {
+        $('#button-icon-change').fadeOut('slow');
+        $('#scrollto').removeClass('changing');
+        ind=!ind;
+    }
+    let ind = true
     $(document).scroll(function(){
 
-        if ($(this).scrollTop() >= 400 && $(this).scrollTop() <= 500){
-            addMenu();
+        if ($(this).scrollTop() >= 400){
+            if (ind===true) {
+                addMenu();                
+            }
+            else if (ind===false) {
+                closedMenu()
+            }
         }
-        else if ($(this).scrollTop() < 450) {
+        else if ($(this).scrollTop() < 400) {
             removeMenu();
         }
     });
     function closeMenu() {
         $('#scrollto').addClass('changing');
         $('#button-icon-change').fadeIn('slow');
-
+        ind=!ind;
     }
-
+    function closedMenu() {
+        $('#scrollto').addClass('changing');
+        $('#button-icon-change').fadeIn('slow');
+    }
 
         $('.menu-href-spec').click(function (ev) {ev.preventDefault();
         $('#button-icon-change').fadeOut('slow');
@@ -102,16 +113,13 @@ function buttons() {
         let height = $(newd).offset().top;
         window.scrollBy(0, height-100);
         })
-// scrollBy
 
 
     if ($(this).scrollTop() > 500) {
         addMenu();
     }
 
-
-
-
+// маска
 
     $(function(){
         $("#phone").mask("+7 (999) 999-99-99");
@@ -123,28 +131,7 @@ function buttons() {
       });
 
 
-
-
-
-
-
-// <nav>
-//   <ul>
-//     <li><a href="#1">First</a></li>
-//     <li><a href="#2">Second</a></li>
-//     <li><a href="#3">Third</a></li>
-//     <li><a href="#4">Fourth</a></li>
-//     <li><a href="#5">Fifth</a></li>
-//   </ul>
-// </nav>
-
-// <div class="sections">
-//   <section id="1"><h1>First</h1></section>
-//   <section id="2"><h1>Second</h1></section>
-//   <section id="3"><h1>Third</h1></section>
-//   <section id="4"><h1>Fourth</h1></section>
-//   <section id="5"><h1>Fifth</h1></section>
-// </div>
+// навигация
 
 var sections = $('.menu-find')
 , nav = $('.listik')
