@@ -6,7 +6,6 @@ body {
     overflow: auto;
 }
 .header {
-    height:100%;
         width:100%;
         background-image:url(../img/image.avif);
         background-repeat:no-repeat;
@@ -270,6 +269,7 @@ flex-wrap: wrap;
 .b5-list-1-1 {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1500px;
 }
 .b5-list-1, .b5-list-2 {
     border: 1px rgb(122, 139, 150) solid;
@@ -479,6 +479,7 @@ flex-wrap: wrap;
     font-size: 19px;
     height: 40px;
     padding-left: 25px;
+    padding-right: 25px;
     box-sizing: border-box;
     margin-right: 200px;
     font-family: Arial, Helvetica, sans-serif;
@@ -560,6 +561,7 @@ input[type=checkbox]
     border: 0;
     outline: none;
     color: rgb(49, 49, 49);
+    padding-right: 25px;
 }
 .button-form-2 {
     width: 100%;
@@ -821,7 +823,7 @@ footer {
 
 /* Мобильная версия */
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
 
 /* header */
 
@@ -1058,230 +1060,6 @@ footer {
         text-align: center;
     }
 
-
-
-
-
-
-    /*.chb4-politics {
-        font-size: 20px;
-        margin-left:10px;
-        overflow: hidden;
-    }
-    .conf-politics {
-        box-sizing: border-box;
-    }
-    .chb4-politics-a-ins{
-        overflow: hidden;
-    }
-
-
-
-    /* 
-
-
-    .b6-2-1, .b6-2-2 {
-        margin: 5px 0 5px 0;
-    }
-    .block-7 {
-        display: flex;
-    }
-
-
-    .b7-forms-2 {
-        display: flex;
-        flex-direction: column;
-        padding: 0 4vw 30px 2vw
-    }
-    .form-1 {
-        width: 100%;
-
-    }
-    .b7-forms::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(58, 58, 58, 0.463) url(../img/round.gif) center / 50px no-repeat;
-        opacity: 0;
-        visibility: hidden;
-    }
-    .b7-forms.sending::after {
-        opacity: 1;
-        visibility: visible;
-    }
-    .name-form, .number-form, .email-form, .message-form, .button-form {
-        display: flex;
-        width: 100%;
-        margin: 15px 0 15px 0;
-    }
-    .name-form {
-        margin-top: 0;
-    }
-
-    .name-form-1, .number-form-1, .email-form-1, .message-form-1, .button-form-1 {
-        box-sizing: border-box;
-        width: 100%; 
-    }
-
-    .name-form-2:focus, .number-form-2:focus, .email-form-2:focus, .message-form-2:focus {
-        border: 1px rgb(169, 169, 169) solid;
-    }
-    .email-form-2.error{
-        border: red solid;
-    }
-    .chb2-ins, .chb3-ins, .chb4-ins {
-        display: none;
-    }
-    .chb2-ins:checked + .label::after, .chb3-ins:checked + .label::after, .chb4-ins:checked + .label::after {
-        transform: scale(1);
-    }
-    .label {
-        display: flex; 
-        position: relative;
-        cursor: pointer;
-    }
-    .label::before {
-        content: "";
-        align-self: flex-start;
-        flex: 0 0 20px;
-        height: 20px;
-        background-color: #fff;
-        border-radius: 4px;
-        margin: 0 14px 0 0;
-    }
-    .label::after {
-        transition: transform 0.5s ease 0s;
-        content: "";
-        width: 14px;
-        height: 14px;
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        background-color: rgb(96, 150, 180);
-        border-radius: 4px;
-        transform: scale(0);
-    }
-    .label.pol::before {
-        margin-right: 20px;
-    }
-    .label.pol.error {
-        box-shadow: 0 0 15px red;
-    }
-    input[type=checkbox]
-    {
-    transform: scale(1.25);
-    }
-    .chb-1 {
-        opacity: 0;
-        cursor: inherit;
-    }
-    .star, .star-1 {
-        color: brown;
-        font-size: 25px;
-        margin-right: 5px;
-    }
-    .star-1 {
-        opacity: 0;
-        cursor: default;
-    }
- 
-    .button-form-2:hover {
-        background-color: bisque;
-        border: 2px black solid;
-    }
-    .button-form-2:focus {
-        background-color: rgb(252, 235, 214);
-        border: 2px rgb(63, 63, 63) solid;
-    }
-    .conf-politics {
-        display: flex;
-        align-items: flex-start;
-        margin-top: 10px;
-        margin-left: 10px;
-    }
-    .comment {
-        font-size: 20px;
-        margin-left: 30px;
-    }
-    .comment-1-1 {
-        color: brown;
-        font-size: 25px;
-    }
-    .chb4 {
-        margin-top: 5px;
-    }
-
-    .chb4-politics-a{
-        text-decoration: none; 
-        color: rgb(44, 75, 92);   
-    }
-    .chb4-politics-a:hover {
-        text-decoration: underline 2px;
-    }
-    .chb2, .chb3 {
-        margin-top: 15px;
-    }
-
-    .shedule-1 {
-        font-size: 35px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .shedule-inside {
-        display: flex;
-        align-items: center;
-        margin-top: 15px;
-        padding-left: 1vw;
-    }
-    .shedule-2 {
-        height: 10px;
-        padding-right: 10px;
-        border: 2px rgb(39, 43, 63) solid;
-        border-radius: 10px;
-
-    }
-    .shedule-3 {
-        font-size: 25px; 
-        margin-left: 10px;
-
-    }
-    .shedule-4 {
-        font-size: 35px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 17px;
-    }
-    .doc {
-        padding-top: 20px;
-
-    }
-    .doc-all {
-        font-size: 20px;
-        margin-left: 25px;
-        padding-bottom: 5px;
-    }
-    .more {
-        margin-left: 25px;
-        padding-top: 20px;
-        padding-bottom: 40px;
-    }
-    .more-1 {
-        text-decoration: none; 
-        color: rgb(53, 58, 85);
-        font-size: 20px;
-
-    }
-    .more-1:hover {
-        text-decoration: underline 2px;
-    } 
- */
-
     /* Адрес */
 .section-address{
     background-color: rgb(96, 150, 180);
@@ -1354,7 +1132,6 @@ footer {
     /* footer */
     
     .footer-1 {
-        /* display: flex; */
         flex-direction: column;
     }
     .footer-content{
@@ -1362,30 +1139,17 @@ footer {
         margin-left: 2vw;
     }
 
+}
+@media screen and (min-width: 3000px) {
+    body {
+        background-color: #ecf7ff;
+        display: grid;
+        justify-content: center;
 
-    /* footer {
-        background-color: rgb(254, 252, 243);
     }
-    .logo-footer{
-        flex-grow: 1;
-        padding: 10px 10vw 10px 8vw;
-        display: flex;
-        align-items: center;
-    }
-    
+    .body {
+        width: 3000px;
 
-    
-    .footer-content-1, .footer-content-2{
-        display: flex;
-        align-items: center;
-    }
-    .footer-img {
-        height: 40px;
-        padding: 7px;
-    }
-    .footer-phone, .footer-email {
-        margin-left: 2vw;
-    } */
-    
 
+    }
 }

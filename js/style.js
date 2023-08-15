@@ -142,7 +142,6 @@ sections.each(function() {
     var top = $(this).offset().top - nav_height,
 
     bottom = top + $(this).outerHeight();
-    top=top-1;
     if (cur_pos >= top && cur_pos <= bottom) {
         nav.find('.menu-href').removeClass('active-1');
         sections.removeClass('active-1');
