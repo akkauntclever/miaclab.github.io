@@ -206,11 +206,9 @@ flex-wrap: wrap;
     align-items: flex-start;
     margin-left: 2vw;
     margin-right: 1vw;
-
 }
 .homuak-1 {
     max-height: 470px;
-
 }
 .b3-list {
     padding: 10px 2vw 15px 2vw;
@@ -228,7 +226,6 @@ flex-wrap: wrap;
     font-size: 30px;
     padding: 10px 0 10px 0;
     display: flex;
-
 }
 .b3-list-1-2, .b3-list-2-2, .b3-list-3-2, .b3-list-4-2 {
     font-size: 20px;
